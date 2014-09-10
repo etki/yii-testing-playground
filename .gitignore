@@ -1,0 +1,15 @@
+# Standard setup
+
+vendor
+composer.lock
+
+# Yii runtime files
+
+runtime
+
+# Various IDE files
+.idea
+.settings
+.project
+nbproject
+tests/_output/*

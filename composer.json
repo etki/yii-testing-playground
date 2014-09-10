@@ -1,0 +1,31 @@
+{
+    "name": "etki/yii-testing-playground",
+    "description": "A simple project for explaining testing stuff",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fike Etki",
+            "email": "etki@etki.name",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "yiisoft/yii": "1.1.15",
+        "yiiext/twig-renderer": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Etki\\NotAWordpress\\Composer\\": "components/composer"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Etki\\NotAWordpress\\Composer\\MigrationInstaller::run",
+            "Etki\\NotAWordpress\\Composer\\FixturesLoader::run",
+            "Etki\\NotAWordpress\\Composer\\AssetsInstaller::run"
+        ],
+        "install-assets": [
+            "Etki\\NotAWordpress\\Composer\\AssetsInstaller::run"
+        ]
+    }
+}

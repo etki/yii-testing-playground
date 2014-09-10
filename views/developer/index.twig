@@ -1,0 +1,22 @@
+{% extends 'views/layouts/main.twig' %}
+{% block page_content %}
+<div class="col-md-12">
+<h1>Our developers</h1>
+    <div class="row">
+        {% for developer in developers %}
+            <div class="col-md-4 developer">
+                <div class="inner">
+                    <div class="profile-photo">
+                        <img src="{{ developer.gravatar }}?s=120">
+                    </div>
+                    <div class="name">{{ developer.name }}</div>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-warning">
+                Sorry, no developers found.
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
