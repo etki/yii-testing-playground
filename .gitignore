@@ -5,7 +5,8 @@ composer.lock
 
 # Yii runtime files
 
-runtime
+runtime/*
+!runtime/.gitkeep
 
 # Various IDE files
 .idea
