@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "ext-sqlite": "*",
         "yiisoft/yii": "1.1.15",
         "yiiext/twig-renderer": "dev-master"
     },
