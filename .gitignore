@@ -7,6 +7,8 @@ composer.lock
 
 runtime/*
 !runtime/.gitkeep
+assets/*
+!assets/.gitkeep
 
 # Various IDE files
 .idea

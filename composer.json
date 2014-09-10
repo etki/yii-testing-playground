@@ -22,10 +22,18 @@
         "post-install-cmd": [
             "Etki\\NotAWordpress\\Composer\\MigrationInstaller::run",
             "Etki\\NotAWordpress\\Composer\\FixturesLoader::run",
-            "Etki\\NotAWordpress\\Composer\\AssetsInstaller::run"
+            "Etki\\NotAWordpress\\Composer\\AssetsInstaller::run",
+            "Etki\\NotAWordpress\\Composer\\ServerConfigGenerator::run"
         ],
         "install-assets": [
             "Etki\\NotAWordpress\\Composer\\AssetsInstaller::run"
+        ],
+        "install-database": [
+            "Etki\\NotAWordpress\\Composer\\MigrationInstaller::run",
+            "Etki\\NotAWordpress\\Composer\\FixturesLoader::run"
+        ],
+        "generate-config": [
+            "Etki\\NotAWordpress\\Composer\\ServerConfigGenerator::run"
         ]
     }
 }
