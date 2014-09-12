@@ -24,6 +24,7 @@
             "Etki\\NotAWordpress\\Composer\\MigrationInstaller::run",
             "Etki\\NotAWordpress\\Composer\\FixturesLoader::run",
             "Etki\\NotAWordpress\\Composer\\AssetsInstaller::run",
+            "Etki\\NotAWordpress\\Composer\\FilesystemPermissionSetter::run",
             "Etki\\NotAWordpress\\Composer\\ServerConfigGenerator::run"
         ],
         "install-assets": [
