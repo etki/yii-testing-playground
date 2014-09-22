@@ -5,12 +5,12 @@
     <div class="row">
         {% for developer in developers %}
             <div class="col-md-4 developer">
-                <div class="inner">
+                <a href="{{ this.createUrl('developer/detail', {'id': developer.id}) }}" class="inner">
                     <div class="profile-photo">
                         <img src="{{ developer.gravatar }}?s=120">
                     </div>
                     <div class="name">{{ developer.name }}</div>
-                </div>
+                </a>
             </div>
         {% else %}
             <div class="alert alert-warning">

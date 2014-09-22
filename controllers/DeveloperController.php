@@ -4,7 +4,7 @@
  *
  * @version 0.1.0
  * @since   0.1.0
- * @package Notawordpress
+ * @package NotAWordpress
  * @author  Fike Etki <etki@etki.name>
  */
 class DeveloperController extends Controller
@@ -19,5 +19,25 @@ class DeveloperController extends Controller
     {
         $developers = Developer::model()->findAll();
         $this->render('index', array('developers' => $developers,));
+    }
+
+    /**
+     * Displays detail info about particular developer.
+     *
+     * @param int|string $id Developer's ID.
+     *
+     * @throws CHttpException (404) Thrown in case developer with such id doesn't
+     * exist.
+     *
+     * @return void
+     * @since 0.1.1
+     */
+    public function actionDetail($id)
+    {
+        $developer = Developer::model()->with('highlights')->findByPk($id);
+        if (!$developer) {
+            throw new CHttpException(404);
+        }
+        $this->render('detail', array('developer' => $developer,));
     }
 }

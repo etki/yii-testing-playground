@@ -53,4 +53,17 @@ class Developer extends CActiveRecord
         $hash = md5(strtolower($this->email));
         $this->gravatar = 'http://gravatar.com/avatar/' . $hash;
     }
+
+    /**
+     * Defines relations.
+     *
+     * @return array Relations.
+     * @since 0.1.0
+     */
+    public function relations()
+    {
+        return array(
+            'highlights' => array(self::HAS_MANY, 'DeveloperHighlight', 'developer',),
+        );
+    }
 }

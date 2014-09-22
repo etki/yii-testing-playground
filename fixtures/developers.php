@@ -3,7 +3,7 @@
 return array(
     array(
         'name' => 'Fike Etki',
-        'email' => 'etki@etki.name',
+        'email' => 'etki+cat-gravatar@etki.name',
     ),
     array(
         'name' => 'John Doe',

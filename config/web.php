@@ -13,6 +13,7 @@ return array_merge_recursive(
                 'showScriptName' => false,
                 'rules' => array(
                     'developers' => 'developer/index',
+                    'developers/<id:\d+>' => 'developer/detail',
                     'feedback' => 'site/feedback',
                     '' => 'site/index',
                 )

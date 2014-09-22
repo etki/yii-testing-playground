@@ -1,0 +1,23 @@
+{% extends '/views/layouts/main.twig' %}
+{% block page_content %}
+<div class="col-md-12 developer">
+    <div class="nav-panel">
+        <a href="{{ this.createUrl('developer/index') }}">&lt; Developers</a>
+    </div>
+    <div class="header">
+        <img src="{{ developer.gravatar }}?s=150">
+        <h1>{{ developer.name }}</h1>
+        <div class="caption">
+            Just another Notawordpress™ developer.
+        </div>
+    </div>
+    <div class="highlights">
+        We <em>love</em> this developer for:
+        <ul>
+        {% for i in 0..2 %}
+            <li>{{ developer.highlights[i].highlight }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
