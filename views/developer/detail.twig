@@ -11,13 +11,24 @@
             Just another Notawordpress™ developer.
         </div>
     </div>
-    <div class="highlights">
-        We <em>love</em> this developer for:
-        <ul>
-        {% for i in 0..2 %}
-            <li>{{ developer.highlights[i].highlight }}</li>
-        {% endfor %}
-        </ul>
+    <div class="col-md-12 highlights">
+        {% if developer.highlights %}
+            {% set limit = min(developer.highlights|length - 1, 2) %}
+            We <em>love</em> this developer for:
+            <ul>
+                {% for i in 0..limit %}
+                    <li>{{ developer.highlights[i].highlight }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <div class="glados-box clearfix">
+                <img class="pull-right" src="/img/glados.jpg"/>
+                <div class="text">
+                    &#8212; You don't have any good sides, {{ developer.name }}.
+                    This is not a joke.
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
