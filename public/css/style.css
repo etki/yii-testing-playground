@@ -23,9 +23,11 @@ body {
   padding-top: 25px; }
 
 .developer .inner {
+  display: block;
   background-color: #fff;
   overflow: hidden;
-  margin: 10px 0; }
+  margin: 10px 0;
+  text-decoration: none; }
   .developer .inner .profile-photo {
     display: inline-block; }
   .developer .inner .name {
@@ -34,5 +36,36 @@ body {
     display: inline-block;
     font-size: 20px;
     vertical-align: middle; }
+.developer .header {
+  background-color: #fff;
+  overflow: hidden; }
+  .developer .header img {
+    float: left;
+    margin-right: 20px; }
+  .developer .header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 300%; }
+  .developer .header .caption {
+    margin-top: 10px;
+    font-size: 150%; }
+.developer .highlights {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 125%; }
+  .developer .highlights ul {
+    margin: 10px 0 0; }
+  .developer .highlights .glados-box {
+    background-color: #fff; }
+    .developer .highlights .glados-box img {
+      border-radius: 75px; }
+    .developer .highlights .glados-box .text {
+      padding: 10px;
+      font-size: 175%; }
+
+.nav-panel {
+  padding: 10px 0;
+  font-size: 150%; }
 
 /*# sourceMappingURL=style.css.map */

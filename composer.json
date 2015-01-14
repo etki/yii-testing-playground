@@ -37,5 +37,8 @@
         "generate-config": [
             "Etki\\NotAWordpress\\Composer\\ServerConfigGenerator::run"
         ]
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
     }
 }
